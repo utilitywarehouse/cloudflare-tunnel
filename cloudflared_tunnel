@@ -1,0 +1,12 @@
+#!/bin/bash
+
+if [[ ${HOSTNAME##*-} == 0 ]]; then
+  uuid="${TUNNEL_UUID_0}"
+fi;
+if [[ ${HOSTNAME##*-} == 1 ]]; then
+  uuid="${TUNNEL_UUID_1}"
+fi;
+if [[ ${HOSTNAME##*-} == 2 ]]; then
+  uuid="${TUNNEL_UUID_2}"
+fi;
+exec /usr/local/bin/cloudflared tunnel run ${uuid}
