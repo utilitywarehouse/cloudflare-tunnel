@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/sh
 
 if [[ ${HOSTNAME##*-} == 0 ]]; then
   uuid="${TUNNEL_UUID_0}"
