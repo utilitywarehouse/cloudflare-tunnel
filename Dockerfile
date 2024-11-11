@@ -1,6 +1,6 @@
-FROM alpine:3.19
+FROM alpine:3.20
 
-ADD --checksum=sha256:c43919493f6111006642af3206eebe79c5cd89889a7e46a74c30e78d2f29e4af https://github.com/cloudflare/cloudflared/releases/download/2024.1.1/cloudflared-linux-amd64 /usr/local/bin/cloudflared
+ADD --checksum=sha256:cd7095b33a861ccb055606d512fc74d81865f46fe9c2c7c84452ee60383db13c https://github.com/cloudflare/cloudflared/releases/download/2024.11.0/cloudflared-linux-amd64 /usr/local/bin/cloudflared
 
 RUN chmod +x /usr/local/bin/cloudflared
 COPY cloudflared_tunnel /usr/local/bin/cloudflared_tunnel
